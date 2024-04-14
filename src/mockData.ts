@@ -8,7 +8,7 @@ const MOCK_DATA = [
   {
     id: 2,
     name: "Jane",
-    age: 25,
+    age: 30,
     email: "jane@gmail.com",
   },
   {

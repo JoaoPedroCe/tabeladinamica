@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import MOCK_DATA from "./mockData";
 import FieldTypeCheckbox from "./components/checkbox/FieldTypeColumn";
-import { handleTableValues } from "./utils/table";
+import { getKeys, handleTableValues } from "./utils/table";
 
 export type DynamicTableFieldsTypes = {
   rows: any[];
@@ -11,13 +11,6 @@ export type DynamicTableFieldsTypes = {
   filters: any[];
   value: any[];
 };
-
-function getKeys(data: Array<any>) {
-  if (data.length === 0) return [];
-
-  const firstRow = data[0];
-  return Object.keys(firstRow);
-}
 
 export default function App() {
   const mockData = MOCK_DATA;

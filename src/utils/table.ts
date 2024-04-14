@@ -29,10 +29,18 @@ export function handleTableValues<T>(
     }
   });
 
+  console.log(columnsData);
   return {
     columns: flatMap(columnsData),
     filters: [],
     rows: flatMap(rowsData),
     value: [],
   };
+}
+
+export function getKeys(data: Array<any>) {
+  if (data.length === 0) return [];
+
+  const firstRow = data[0];
+  return Object.keys(firstRow);
 }
