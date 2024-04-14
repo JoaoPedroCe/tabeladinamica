@@ -55,6 +55,8 @@ export default function App() {
     });
   }
 
+  console.log({ mockData });
+
   return (
     <div className="p-2">
       <p>{JSON.stringify(dynamicTableFieldsTypes)}</p>
@@ -89,6 +91,16 @@ export default function App() {
           selectedKeys={dynamicTableFieldsTypes.value}
         />
       </div>
+
+      <table className="mt-10">
+        <thead>
+          <tr>
+            {dynamicTableFieldsTypes.columns.map((column) => (
+              <th>{column}</th>
+            ))}
+          </tr>
+        </thead>
+      </table>
     </div>
   );
 }
